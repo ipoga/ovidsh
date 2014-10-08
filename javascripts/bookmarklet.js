@@ -17,8 +17,6 @@ if (h == null) {
     document.body.appendChild(h);
 } else {
     h.style.display = "block";
-    h.style.width = "640px";
-    h.style.height = "480px";
     console.log("Div exists");
 }
-h.innerHTML = "<div width='480' height='640' style='background: #fff;position: absolute;top: 20px;left: 20px; padding: 20px; border: 1px solid #777;resize:both;overflow: scroll;z-index:999' id='ovidsh_display'>OvidSH (<a href='javascript:var h = document.getElementById(\"ovidsh_display\");h.style.display = \"none\";void(0);'>Close this window</a>)<hr/><pre>" + out1 + "<br/><br/>" + out2 + "</pre></div>";
+h.innerHTML = "<div style='width: 100%;background: #eee;position: relative;padding: 20px; border: 1px solid #777;resize:both;overflow: scroll;z-index:999' id='ovidsh_display'>OvidSH (<a href='javascript:var h = document.getElementById(\"ovidsh_display\");h.style.display = \"none\";void(0);'>Close this window</a>)<hr/><pre>" + out1 + "<br/><br/>" + out2 + "</pre></div>";
