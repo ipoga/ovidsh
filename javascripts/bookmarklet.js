@@ -13,4 +13,4 @@ for (var i = 0; i < ids.length - 1; i++) {
 }
 var h = document.createElement("div");
 document.body.appendChild(h);
-h.innerHTML = "<div width=200 height=300><pre>" + out1 + "<br/><br/>" + out2 + "</pre></div>";
+h.innerHTML = "<div width=200 height=300 style='z-index:1;position: absolute: top: 20px;left: 20px; padding:20px;'><pre>" + out1 + "<br/><br/>" + out2 + "</pre></div>";
