@@ -19,4 +19,4 @@ if (h == null) {
 } else {
     console.log("Div exists");
 }
-h.innerHTML = "<div width='200' height='300' style='background: #ccc' id='ovidsh_display'><pre>" + out1 + "<br/><br/>" + out2 + "</pre></div>";
+h.innerHTML = "<div width='200' height='300' style='background: #fff;position: absolute;top: 20px;left: 20px; padding: 20px; border: 1px solid #777;' id='ovidsh_display'><pre>" + out1 + "<br/><br/>" + out2 + "</pre></div>";
