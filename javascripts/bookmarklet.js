@@ -1,3 +1,4 @@
+alert("init");
 var ids = document.getElementsByClassName("searchhistory-col-Num");
 var terms = document.getElementsByClassName("searchhistory-search-term");
 var hits = document.getElementsByClassName("searchhistory-col-Results");
