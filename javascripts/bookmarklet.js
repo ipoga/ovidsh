@@ -20,4 +20,4 @@ if (h == null) {
     h.style.display = "block";
     console.log("Div exists");
 }
-h.innerHTML = "<div width='480' height='640' style='background: #fff;position: absolute;top: 20px;left: 20px; padding: 20px; border: 1px solid #777;overflow: auto;' id='ovidsh_display'><a href='javascript:var h = document.getElementById(\"ovidsh_display\");alert(h);h.style.display = \"none\"'>Close this window</a><pre>" + out1 + "<br/><br/>" + out2 + "</pre></div>";
+h.innerHTML = "<div width='480' height='640' style='background: #fff;position: absolute;top: 20px;left: 20px; padding: 20px; border: 1px solid #777;overflow: auto;' id='ovidsh_display'><a href='javascript:var h = document.getElementById(\"ovidsh_display\");h.style.display = \"none\";return false;'>Close this window</a><pre>" + out1 + "<br/><br/>" + out2 + "</pre></div>";
