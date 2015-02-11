@@ -10,7 +10,7 @@ function hta(hta) {
     for (i = 0; i < ls.length; i++) {
         l = ls[i];
         if (l.substring(0, 6) == "Record") {
-            l = "TY  - RPRT";
+            ret = ret + "TY  - RPRT";
             i++;
         } else {
             var d = l.substr(0, 3);
