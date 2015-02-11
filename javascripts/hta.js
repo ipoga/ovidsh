@@ -11,6 +11,7 @@ function hta(hta) {
     for (i = 0; i < ls.length; i++) {
         console.log(".");
         l = ls[i];
+        console.log(l);
         if (l.substring(0, 6) == "Record") {
             console.log("/");
             ret = ret + "TY  - RPRT";
