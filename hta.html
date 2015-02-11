@@ -12,11 +12,9 @@
         <script type="text/javascript" src="javascripts/hta.js"></script>
         <script type="text/javascript">
             function conv() {
-                console.log("A");
                 var input = document.getElementById("in");
                 var outt = document.getElementById("out");
                 outtext = hta(input.value);
-                console.log(outtext);
                 outt.innerHTML = outtext;
             }
         </script>
@@ -46,12 +44,12 @@
                         <h3>Welcome to the HTA Converter GitHub page</h3>
                         <table border="0" cellspacing="0" cellpadding="0" width="100%">
                             <tr>
-                                <td style="width:500px">
-                                    <textarea id="in" style="width:100%;font: normal 10pt 'courier new'" rows="30"></textarea></td>
+                                <td style="width:500px; vertical-align: top">
+                                    <textarea id="in" style="width:100%;font: normal 10pt 'courier new'; vertical-align: top" rows="30"></textarea></td>
                                 <td style="text-align: center;width:70">
                             <a href="javascript:conv();">Convert &gt;&gt;&gt;</a>
                                 </td>
-                                <td style="background:#ddd;font: normal 10pt 'courier new';white-space:pre width:500px" id="out">
+                                <td style="background:#ddd;font: normal 10pt 'courier new';white-space:pre width:500px; vertical-align: top" id="out">
                                     
                                 </td>
                             </tr>
