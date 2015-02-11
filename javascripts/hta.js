@@ -9,12 +9,12 @@ function hta(hta) {
     var l;
     for (i = 0; i < ls.length; i++) {
         l = ls[i];
-        if (substr(l, 0, 6) == "Record") {
+        if (l.substring(0, 6) == "Record") {
             l = "TY  - RPRT";
             i++;
         } else {
-            var d = substr(l, 0, 3);
-            var f = trim(substr(l, 4));
+            var d = l.substr(0, 3);
+            var f = trim(l.substr(4));
             switch (d) {
                 case "TTL":
                     l = "T1  - $f";
