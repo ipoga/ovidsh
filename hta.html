@@ -12,11 +12,12 @@
         <script type="text/javascript" src="javascripts/hta.js"></script>
         <script type="text/javascript">
             function conv() {
+                console.log("A");
                 var input = document.getElementById("in");
-                var output = document.getElementById("out");
+                var outt = document.getElementById("out");
                 outtext = hta(input.innerHTML);
                 console.log(outtext);
-                output.innerHTML = outtext;
+                outt.innerHTML = outtext;
             }
         </script>
         <title>CRD-Converter</title>
