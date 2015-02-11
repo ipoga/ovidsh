@@ -11,8 +11,8 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="javascripts/script.js"></script>
         <script type="text/javascript" src="javascripts/hta.js"></script>
-        <title>HTA-Converter</title>
-        <meta name="description" content="HTA reference conversion">
+        <title>CRD-Converter</title>
+        <meta name="description" content="CRD reference conversion">
 
         <meta name="viewport" content="width=device-width,initial-scale=1">
 
@@ -22,10 +22,10 @@
 
         <div class="wrapper">
             <header>
-                <h1 class="title">HTA Converter</h1>
+                <h1 class="title">CRD Converter</h1>
             </header>
             <div id="container">
-                <p class="tagline">Convert HTA references to RIS</p>
+                <p class="tagline">Convert CRD references to RIS</p>
                 <div id="main" role="main">
                     <div class="download-bar">
                         <div class="inner">
@@ -38,8 +38,7 @@
                     <article class="markdown-body">
                         <h3>Welcome to the HTA Converter GitHub page</h3>
 
-                        <div id="in">
-                        <pre>Record #1
+                        <textarea id="in">Record #1
 %%%%
 TTL:   Pudendal nerve block for treatment of pudendal neuralgia
 XSO:   Lansdale, PA: HAYES, Inc
@@ -69,17 +68,20 @@ XAC:   32013000584
 XID:   29 Jul 2013
 XLA:   English
 DBN:   HTA
-RUR:   http://www.crd.york.ac.uk/CRDWeb/ShowRecord.asp?ID=32013000584
-                        </pre>
-                        </div>
-                        
+RUR:   http://www.crd.york.ac.uk/CRDWeb/ShowRecord.asp?ID=32013000584</textarea>
+
+
                         <div id="out">-</div>
-                        <script type="text/javascript">
-                            var input = document.getElementById("in");
-                            var output = document.getElementById("out");
-                            outtext = hta(input.innerHTML);
-                            alert(outtext);
-                            output.innerHTML = outtext;
+                        <script type="text/javascript" onload="conv();">
+                            function conv() {
+                                console.log("A");
+                                var input = document.getElementById("in");
+                                var output = document.getElementById("out");
+                                console.log(input.value);
+                                outtext = hta(input.innerHTML);
+                                alert(outtext);
+                                output.innerHTML = outtext;
+                            }
                         </script>
 
                     </article>
