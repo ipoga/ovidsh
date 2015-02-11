@@ -6,7 +6,7 @@
  */
 function hta(hta) {
     var ls = hta.split("\n");
-    var l;
+    var ret;
     for (i = 0; i < ls.length; i++) {
         l = ls[i];
         if (l.substring(0, 6) == "Record") {
@@ -17,16 +17,16 @@ function hta(hta) {
             var f = l.substr(4).trim();
             switch (d) {
                 case "TTL":
-                    l = "T1  - $f";
+                    ret = ret + "T1  - $f\n";
                     break;
                 case "PUB":
-                    l = "PB  - $f";
+                    ret = ret + "PB  - $f\n";
                     break;
                 case "XYR":
-                    l = "Y1  - $f";
+                    ret = ret + "Y1  - $f\n";
                     break;
                 case "RUR":
-                    l = "ER  - \n";
+                    ret = ret + "ER  - \n\n";
                     break;
                 case "AUT":
                     var aus = f.split(",");
@@ -34,11 +34,11 @@ function hta(hta) {
                         l = "";
                         for (j = 0; j < aus.length; j++) {
                             var au = aus[j].trim();
-                            l = l + "A1  - " + au + "\n";
+                            ret = ret + "A1  - " + au + "\n";
                         }
                         l = substr(l, 0, -1);
                     } else {
-                        l = "A1  - $f";
+                        ret = ret + "A1  - $f\n";
                     }
                     break;
                 default:
@@ -47,5 +47,5 @@ function hta(hta) {
             }
         }
     }
-    return l;
+    return ret;
 }
