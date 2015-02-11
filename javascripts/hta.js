@@ -12,9 +12,11 @@ function hta(hta) {
         console.log(".");
         l = ls[i];
         if (l.substring(0, 6) == "Record") {
+            console.log("/");
             ret = ret + "TY  - RPRT";
             i++;
         } else {
+            console.log(",");
             var d = l.substr(0, 3);
             var f = l.substr(4).trim();
             switch (d) {
