@@ -14,7 +14,7 @@ function hta(hta) {
             i++;
         } else {
             var d = l.substr(0, 3);
-            var f = trim(l.substr(4));
+            var f = l.substr(4).trim();
             switch (d) {
                 case "TTL":
                     l = "T1  - $f";
@@ -33,7 +33,7 @@ function hta(hta) {
                     if (aus.length > 1) {
                         l = "";
                         for (j = 0; j < aus.length; j++) {
-                            var au = trim(aus[j]);
+                            var au = aus[j].trim();
                             l = l + "A1  - " + au + "\n";
                         }
                         l = substr(l, 0, -1);
