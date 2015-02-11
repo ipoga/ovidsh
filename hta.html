@@ -11,6 +11,17 @@
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script type="text/javascript" src="javascripts/script.js"></script>
         <script type="text/javascript" src="javascripts/hta.js"></script>
+        <script type="text/javascript">
+            function conv() {
+                                console.log("A");
+                                var input = document.getElementById("in");
+                                var output = document.getElementById("out");
+                                console.log(input.value);
+                                outtext = hta(input.innerHTML);
+                                alert(outtext);
+                                output.innerHTML = outtext;
+                            }
+        </script>
         <title>CRD-Converter</title>
         <meta name="description" content="CRD reference conversion">
 
@@ -71,18 +82,10 @@ DBN:   HTA
 RUR:   http://www.crd.york.ac.uk/CRDWeb/ShowRecord.asp?ID=32013000584</textarea>
 
 
+                        <a href="javascript:conv();">Convert</a>
+                        
                         <div id="out">-</div>
-                        <script type="text/javascript" onload="conv();">
-                            function conv() {
-                                console.log("A");
-                                var input = document.getElementById("in");
-                                var output = document.getElementById("out");
-                                console.log(input.value);
-                                outtext = hta(input.innerHTML);
-                                alert(outtext);
-                                output.innerHTML = outtext;
-                            }
-                        </script>
+                        
 
                     </article>
                 </div>
