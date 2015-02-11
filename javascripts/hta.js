@@ -5,9 +5,11 @@
  * @return  the RIS formatted string
  */
 function hta(hta) {
+    console.log("1");
     var ls = hta.split("\n");
     var ret = "";
     for (i = 0; i < ls.length; i++) {
+        console.log(".");
         l = ls[i];
         if (l.substring(0, 6) == "Record") {
             ret = ret + "TY  - RPRT";
