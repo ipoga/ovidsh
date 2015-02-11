@@ -7,7 +7,7 @@
 function hta(hta) {
     var ls = hta.split("\n");
     var l;
-    for (i = 0; i < length(ls); i++) {
+    for (i = 0; i < ls.length; i++) {
         l = ls[i];
         if (substr(l, 0, 6) == "Record") {
             l = "TY  - RPRT";
@@ -30,7 +30,7 @@ function hta(hta) {
                     break;
                 case "AUT":
                     var aus = f.split(",");
-                    if (length(aus) > 1) {
+                    if (aus.length > 1) {
                         l = "";
                         for (j = 0; j < aus.length; j++) {
                             var au = trim(aus[j]);
