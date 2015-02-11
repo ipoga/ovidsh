@@ -6,7 +6,7 @@
  */
 function hta(hta) {
     var ls = hta.split("\n");
-    var ret;
+    var ret = "";
     for (i = 0; i < ls.length; i++) {
         l = ls[i];
         if (l.substring(0, 6) == "Record") {
