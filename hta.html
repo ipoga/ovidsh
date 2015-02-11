@@ -13,13 +13,13 @@
         <script type="text/javascript" src="javascripts/hta.js"></script>
         <script type="text/javascript">
             function conv() {
-                                console.log("A");
-                                var input = document.getElementById("in");
-                                var output = document.getElementById("out");
-                                console.log(input.value);
-                                outtext = hta(input.innerHTML);'\n\
-                                output.innerHTML = outtext;
-                            }
+                console.log("A");
+                var input = document.getElementById("in");
+                var output = document.getElementById("out");
+                console.log(input.value);
+                outtext = hta(input.innerHTML);
+                output.innerHTML = outtext;
+            }
         </script>
         <title>CRD-Converter</title>
         <meta name="description" content="CRD reference conversion">
@@ -82,9 +82,9 @@ RUR:   http://www.crd.york.ac.uk/CRDWeb/ShowRecord.asp?ID=32013000584</textarea>
 
 
                         <a href="javascript:conv();">Convert</a>
-                        
+
                         <div id="out">-</div>
-                        
+
 
                     </article>
                 </div>

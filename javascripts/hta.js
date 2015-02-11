@@ -17,13 +17,13 @@ function hta(hta) {
             var f = l.substr(4).trim();
             switch (d) {
                 case "TTL":
-                    ret = ret + "T1  - $f\n";
+                    ret = ret + "T1  - "+f+"\n";
                     break;
                 case "PUB":
-                    ret = ret + "PB  - $f\n";
+                    ret = ret + "PB  - "+f+"\n";
                     break;
                 case "XYR":
-                    ret = ret + "Y1  - $f\n";
+                    ret = ret + "Y1  - "+f+"\n";
                     break;
                 case "RUR":
                     ret = ret + "ER  - \n\n";
@@ -38,7 +38,7 @@ function hta(hta) {
                         }
                         l = substr(l, 0, -1);
                     } else {
-                        ret = ret + "A1  - $f\n";
+                        ret = ret + "A1  - "+f+"\n";
                     }
                     break;
                 default:
