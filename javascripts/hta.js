@@ -9,29 +9,25 @@ function hta(hta) {
     var ls = hta.split("\n");
     var ret = "";
     for (i = 0; i < ls.length; i++) {
-        console.log(".");
         l = ls[i];
-        console.log(l);
         if (l.substring(0, 6) == "Record") {
-            console.log("/");
-            ret = ret + "TY  - RPRT";
+            ret = ret + "TY  - RPRT<br/>";
             i++;
         } else {
-            console.log(",");
             var d = l.substr(0, 3);
             var f = l.substr(4).trim();
             switch (d) {
                 case "TTL":
-                    ret = ret + "T1  - "+f+"\n";
+                    ret = ret + "T1  - "+f+"<br/>";
                     break;
                 case "PUB":
-                    ret = ret + "PB  - "+f+"\n";
+                    ret = ret + "PB  - "+f+"<br/>";
                     break;
                 case "XYR":
-                    ret = ret + "Y1  - "+f+"\n";
+                    ret = ret + "Y1  - "+f+"<br/>";
                     break;
                 case "RUR":
-                    ret = ret + "ER  - \n\n";
+                    ret = ret + "ER  - <br/><br/>";
                     break;
                 case "AUT":
                     var aus = f.split(",");
@@ -39,11 +35,11 @@ function hta(hta) {
                         l = "";
                         for (j = 0; j < aus.length; j++) {
                             var au = aus[j].trim();
-                            ret = ret + "A1  - " + au + "\n";
+                            ret = ret + "A1  - " + au + "<br/>";
                         }
                         l = substr(l, 0, -1);
                     } else {
-                        ret = ret + "A1  - "+f+"\n";
+                        ret = ret + "A1  - "+f+"<br/>";
                     }
                     break;
                 default:
