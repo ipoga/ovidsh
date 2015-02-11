@@ -5,7 +5,7 @@
  * @return  the RIS formatted string
  */
 function hta(hta) {
-    var ls = split("\n", hta);
+    var ls = hta.split("\n");
     var l;
     for (i = 0; i < length(ls); i++) {
         l = ls[i];
@@ -29,7 +29,7 @@ function hta(hta) {
                     l = "ER  - \n";
                     break;
                 case "AUT":
-                    var aus = split(",", f);
+                    var aus = f.split(",");
                     if (length(aus) > 1) {
                         l = "";
                         for (j = 0; j < aus.length; j++) {
