@@ -20,6 +20,9 @@ function hta(hta) {
                 case "TTL":
                     ret = ret + "T1  - "+f+"<br/>";
                     break;
+                case "XAO":
+                    ret = ret + "AB  - "+f+"<br/>";
+                    break;
                 case "PUB":
                     ret = ret + "PB  - "+f+"<br/>";
                     break;
