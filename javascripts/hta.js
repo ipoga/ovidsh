@@ -37,7 +37,7 @@ function hta(hta) {
                             var au = aus[j].trim();
                             ret = ret + "A1  - " + au + "<br/>";
                         }
-                        l = substr(l, 0, -1);
+                        l = l.substr(0, -1);
                     } else {
                         ret = ret + "A1  - "+f+"<br/>";
                     }
