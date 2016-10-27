@@ -6,7 +6,7 @@ var out2 = "";
 for (var i = 0; i < ids.length - 1; i++) {
     var id = ids[i + 1].innerHTML;
     var term = terms[i].innerHTML.trim();
-    var hit = hits[i + 1].innerHTML.trim().replace(/(\r\n|\n|\r)/gm,"");;
+    var hit = parseInt(hits[i + 1].innerHTML.trim());
     out1 = out1 + id + "\t" + term + "\t" + hit + "\n";
     out2 = out2 + term + "\n";
 }
